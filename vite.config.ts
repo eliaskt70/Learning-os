@@ -1,0 +1,10 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  // Relative base so the built app works from any static host or sub-path.
+  base: './',
+  server: { host: true, port: 5173 },
+  preview: { host: true, port: 4173 },
+});
